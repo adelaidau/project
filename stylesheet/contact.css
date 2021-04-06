@@ -1,0 +1,31 @@
+h1 {text-align: center;
+    color: rgb(118, 122, 126);}
+
+body {background-color: rgb(214, 240, 248);
+color: rgb(88, 86, 86);
+text-align: center;
+padding-right: 8%;
+padding-left: 8%;}
+
+div {text-align: center; }
+
+.topnav {display: block;
+padding: 10px 20px;
+text-decoration: none;
+font-size:medium;
+font-weight: bold;
+color: mistyrose;
+word-spacing: 6em;}
+
+form {background-color: whitesmoke;
+margin-inline: 10%;
+padding-top: 5%;
+padding-bottom: 5%;}
+
+#description {padding-top: 2%;}
+
+#firstname {padding-top: 0.5%;}
+
+#lastname {padding-top: 0.5%;}
+
+#email {padding-top: 0.5%}

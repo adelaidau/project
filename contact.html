@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact</title>
+    <link rel="stylesheet" type="text/css" href="stylesheet/contact.css"/>
     <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z9ZZPK2C33"></script>
 <script>
@@ -29,7 +30,7 @@
     </div>
     <form method="post" action="/">
     <div>
-        <label for="firstname">First Name: </label>
+        <label for="firstname" id="firstname">First Name: </label>
         <input
         type="text"
         id="firstname"
@@ -37,7 +38,7 @@
         placeholder="First Name"/>
     </div>
     <div>
-        <label for="lastname"> Last Name: </label>
+        <label for="lastname" id="lastname"> Last Name: </label>
         <input
         type="text"
         id="lastname"
@@ -45,14 +46,14 @@
         placeholder="Last Name"/>
     </div>
     <div>
-        <label for="email"> Email:</label>
+        <label for="email" id="email"> Email Address:</label>
         <input
         type="text"
         id="email"
         name="email"
         placeholder="Email address" />
     </div>
-    <div>
+    <div id="description">
         Description:
     </div>
     <div>
@@ -60,7 +61,7 @@
         id="comments"
         name="comments"
         rows="5"
-        cols="25"
+        cols="30"
         placeholder="Leave a description here...">
     </textarea>
     </div>
