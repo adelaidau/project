@@ -23,13 +23,20 @@
     padding-right: 8%;
     padding-left: 8%;}
     div {text-align: center;}
-    .topnav {display: block;
-    padding: 10px 20px;
-    text-decoration: none;
-    font-size:medium;
+    .topnav {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: medium;
     font-weight: bold;
-    color: mistyrose;
+    display: block;
+    line-height: 2.27em;
+    padding: 10px 20px ;
+    text-decoration: none;
     word-spacing: 6em;}
+
+    img {
+        border: rgb(167, 230, 198) 5px solid;
+    }
 </style>
 </head>
 <body>
@@ -62,7 +69,7 @@
     </ul>
     <h2> Amalfi Coast</h2>
     <img src="images/amalficoast1.png" alt="amalficoast1" title="amalficoast1" width="300" height="300">
-    <img src="images/amalficoast2.png" alt="amalficoast2" title="amalficoast1" width="300" height="300">
+    <img id="ac2" src="images/amalficoast2.png" alt="amalficoast2" title="amalficoast1" width="300" height="300">
     <p>
     The Amalfi Coast is one of the most spectacular places I have been to. Separate a couple of days so you
     can go on a roadtrip through different towns. My suggestion would be to stay in a centric town and then travel
@@ -75,5 +82,15 @@
             food.
         </li>
     </ul>
+    <script>
+        const amalfiStyle = document.getElementById ("ac2")
+        const image = document.getElementById ("ac2")
+
+        function ac2 () {
+            image.src = "images/amalficoast2.png";
+            image.style.borderColor = "aqua";
+        }
+        amalfiStyle.onclick = ac2;
+    </script>
 </body>
 </html>

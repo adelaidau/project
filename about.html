@@ -70,6 +70,58 @@
         <td>9.2</td>
       </tr>
     </table>
+    <br>
+    <h2 id="mtext">
+      You will see my favorite picture from each country with a different border color! 
+    </h2>
     </div>
+    <script>
+      const image = document.querySelector ("img");
+      const heading = document.querySelector ("h1");
+
+      function textChange () {
+        image.src = "images/professional-photo.jpg";
+        heading.textContent = "Get to know me!";
+      }
+      image.onclick = textChange;
+
+      function expandImage () {
+        let w = image.width;
+        image.width = w* 1.25
+      }
+      image.onmouseover = expandImage;
+
+      function reduceImage () {
+        let w = image.width;
+        image.width = w/1.25
+      }
+      image.onmouseout = reduceImage;
+
+      const msgList = [
+        "You will see my favorite picture", 
+        "with a different color border", 
+        "in each page!",
+      ];
+      const mtext = document.getElementById ("mtext");
+      let p = 5;
+      let i = 0;
+
+      function move () {
+        mtext.innerHTML = msgList[i];
+        mtext.style.left = p + "px";
+        if (p > document.querySelector ("h2"). clientWidth - 350) {
+          p = 5;
+          i ++; 
+          if (i === msgList.length) {
+            i = 0;
+          }
+        } else {
+          p = p + 5;
+        }
+        setTimeout (move, 1000);
+      }
+
+      document.querySelector ("body").onload = move; 
+    </script>
 </body>
 </html>

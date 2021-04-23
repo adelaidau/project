@@ -17,7 +17,7 @@
 </script>
 </head>
 <body>
-    <h1>Contact Form</h1>
+    <h1 id="title">Contact Form</h1>
     <div class="topnav" id="banner">
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
@@ -65,8 +65,37 @@
         placeholder="Leave a description here...">
     </textarea>
     </div>
-        <a href="mailto:aurreaescobar1@babson.edu"><img src="images/send.png" alt="send" title="send" 
+        <a href="mailto:aurreaescobar1@babson.edu"><img id="send" src="images/send.png" alt="send" title="send" 
             height="50" width="50"></a>
+        <div>
+        <button type="reset" name="reset"> Reset </button>
+        </div>
     </form>
+    <script>
+     function keyPress () {
+         document.getElementById ("comments").style.backgroundColor = "aqua";
+     }
+     document.getElementById ("comments").onkeypress=keyPress;
+
+     function validate () {
+         let fname = document.getElementById ("firstname").value;
+         let lname = document.getElementById ("lastname").value;
+         let email = document.getElementById ("email").value;
+         if (fname == "") {
+             alert ("Please enter your first name!");
+             return false;
+         }
+         else if (lname == "") {
+             alert ("Please enter your last name!");
+             return false;
+         }
+         else if (email == "") {
+             alert ("Please enter your email!");
+             return false; 
+         }
+         }
+    document.getElementById ("send").onclick = validate;
+
+    </script>
 </body>
 </html>

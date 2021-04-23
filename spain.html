@@ -23,13 +23,20 @@
     padding-right: 8%;
     padding-left: 8%;}
     div {text-align: center;}
-    .topnav {display: block;
-    padding: 10px 20px;
-    text-decoration: none;
-    font-size:medium;
+    .topnav {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: medium;
     font-weight: bold;
-    color: mistyrose;
+    display: block;
+    line-height: 2.27em;
+    padding: 10px 20px ;
+    text-decoration: none;
     word-spacing: 6em;}
+
+    img {
+        border: rgb(63, 31, 85) 5px solid;
+    }
 </style>
 </head>
 <body>
@@ -67,7 +74,7 @@ a big tip is to ask for the tax free which they will return at the airport!
     </li>
 </ul>
 <h2> Barcelona</h2>
-<img src="images/barcelona1.png" alt="barcelona1" title="barcelona1" width="300" height="300">
+<img id="bcn1" src="images/barcelona1.png" alt="barcelona1" title="barcelona1" width="300" height="300">
 <img src="images/barcelona2.png" alt="barcelona2" title="barcelona2" width="300" height="300">
 <h3> Overview </h3>
 <p>
@@ -86,5 +93,15 @@ Walk by Paseo de Gracia and Rambla Catalunia, very nice streets where there are 
         will understand why the vibes of this city are insane!
     </li>
 </ul>
+<script>
+    const barcelonaStyle = document.getElementById ("bcn1")
+    const image = document.getElementById ("bcn1")
+
+    function bcn1 () {
+        image.src = "images/barcelona1.png";
+        image.style.borderColor = "purple";
+    }
+    barcelonaStyle.onclick = bcn1;
+</script>
 </body>
 </html>

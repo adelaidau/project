@@ -23,13 +23,20 @@
     padding-right: 8%;
     padding-left: 8%;}
     div {text-align: center;}
-    .topnav {display: block;
-    padding: 10px 20px;
-    text-decoration: none;
-    font-size:medium;
+    .topnav {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: medium;
     font-weight: bold;
-    color: mistyrose;
+    display: block;
+    line-height: 2.27em;
+    padding: 10px 20px ;
+    text-decoration: none;
     word-spacing: 6em;}
+
+    img {
+        border: rgb(159, 219, 238) 5px solid;
+    }
 </style>
 </head>
 <body>
@@ -45,8 +52,8 @@
         <a href="sitemap.html"> Sitemap</a>
     </div>
     <h2> Cartagena </h2>
-    <img src="images/cartagena1.png" alt="cartagena1" title="cartagena1" width="300" height="300">
-    <img src="images/cartagena2.png" alt="cartagena2" title="cartagena2" width="300" height="300">
+    <img id="ctg1" src="images/cartagena1.png" alt="cartagena1" title="cartagena1" width="300" height="300">
+    <img id="ctg2" src="images/cartagena2.png" alt="cartagena2" title="cartagena2" width="300" height="300">
     <h3> Overview </h3>
     <p>
     Cartagena is a very beautiful city. The "ciudad vieja", looks like a museum, with beautiful and colorful houses
@@ -67,8 +74,8 @@
         </li>
     </ul>
     <h2> Medellin </h2>
-    <img src="images/medellin1.png" alt="medellin1" title="medellin1" width="300" height="300">
-    <img src="images/medellin2.png" alt="medellin2" title="medellin2" width="300" height="300">
+    <img id="mde1" src="images/medellin1.png" alt="medellin1" title="medellin1" width="300" height="300">
+    <img id="mde2" src="images/medellin2.png" alt="medellin2" title="medellin2" width="300" height="300">
     <p>
     Medellin is a very nice city. It is known as "the city of eternal Spring", because of its weather. The city has 
     many amazing things to see but most importantly the positive transformation of the city from the internal war 
@@ -90,5 +97,16 @@
         of typical food at a very good price.
         </li>
     </ul>
+    <script>
+        const cartagenaStyle = document.getElementById("ctg1")
+        const image = document.querySelector ("img")
+
+        function ctg1 () {
+            image.src = "images/cartagena1.png";
+            image.style.borderColor = "pink";
+        }
+        cartagenaStyle.onclick = ctg1;
+        
+    </script>
 </body>
 </html>

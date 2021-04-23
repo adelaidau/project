@@ -23,13 +23,20 @@
     padding-right: 8%;
     padding-left: 8%;}
     div {text-align: center;}
-    .topnav {display: block;
-    padding: 10px 20px;
-    text-decoration: none;
-    font-size:medium;
+    .topnav {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: medium;
     font-weight: bold;
-    color: mistyrose;
+    display: block;
+    line-height: 2.27em;
+    padding: 10px 20px ;
+    text-decoration: none;
     word-spacing: 6em;}
+
+    img {
+        border: salmon 5px solid;
+    }
 </style>
 </head>
 <body>
@@ -46,7 +53,7 @@
     </div>
     <h2>Santorini</h2>
     <img src="images/santorini1.png" alt="santorini1" title="santorini1" width="300" height="300">
-    <img src="images/santorini2.png" alt="santorini2" title="santorini2" width="300" height="300">
+    <img id="snt2" src="images/santorini2.png" alt="santorini2" title="santorini2" width="300" height="300">
     <h3> Overview</h3>
     <p>
     Santorini is a small island with traditional Greek roots, it has amazing views and a very unique and local taste
@@ -82,5 +89,15 @@
         the party zone and the more formal restaurant zone.
     </li>
     </ul>
+    <script>
+        const santoriniStyle = document.getElementById ("snt2")
+        const image = document.getElementById ("snt2")
+
+        function snt2 () {
+            image.src = "images/santorini2.png";
+            image.style.borderColor = "orange";
+        }
+        santoriniStyle.onclick = snt2;
+    </script>
 </body>
 </html>
